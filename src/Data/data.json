@@ -1,0 +1,37 @@
+[
+    {
+        "image": "Category-CellPhone.png",
+        "name": "Phones",
+        "id" : 1
+    },
+    {
+        "image": "Category-Computer.png",
+        "name": "Computers",
+        "id" : 2
+    },
+    {
+        "image": "Category-SmartWatch.png",
+        "name": "SmartWatch",
+        "id" : 3
+    },
+    {
+        "image": "Category-Headphone.png",
+        "name": "HeadPhones",
+        "id" : 4
+    },
+    {
+        "image": "Category-Gamepad.png",
+        "name": "Gaming",
+        "id" : 5
+    },
+    {
+        "image": "Group 1000005941.png",
+        "name": "Camera",
+        "id" : 6
+    },
+    {
+        "image": "Category-Computer.png",
+        "name": "Others",
+        "id" : 7
+    }
+]
