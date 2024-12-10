@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Category from './Category';
@@ -27,7 +27,7 @@ function Spotlight({ spotlightRef }) {
     const filteredProducts = products.filter(product => {
         const isSearchMatch = product.name.toLowerCase().includes(search.toLowerCase());
         const isCategoryMatch = category ? product.categories === category : true;
-        console.log(product.name, isSearchMatch, isCategoryMatch); 
+        console.log(product.name, isSearchMatch, isCategoryMatch);
         return isSearchMatch && isCategoryMatch;
     });
 
@@ -69,76 +69,76 @@ function Spotlight({ spotlightRef }) {
                 </RightBox>
             </SpotContainer>
 
-            <Category  setCategoryFilter={handleCategorySelect}/>
+            <Category setCategoryFilter={handleCategorySelect} />
 
             <ProductsContainer ref={spotlightRef}>
                 <Container>
-                {filteredProducts.length > 0 ? (
-                    filteredProducts.map((product, index) => (
-                        <DogFood key={index}>
-                            <DogTop>
-                                <NewDiv>
-                                    {product.new ? <NewButton>New</NewButton> : null}
-                                    {product.discount && product.offer ? <Offer>-{product.offer}%</Offer> : null}
-                                </NewDiv>
-                                <DogImage src={require(`../../../assets/images/${product.image}`)} alt="image" />
-                                <Icons>
-                                    <LikeImage
-                                        src={require(`../../../assets/images/${product.icons}`)}
-                                        alt="image"
-                                        onClick={() => handleLikeClick(product.id)}
-                                        style={{
-                                            backgroundColor: likedProducts.has(product.id) ? 'red' : '',
-                                            cursor: 'pointer',
-                                        }} />
-                                    <LikeImage src={require(`../../../assets/images/${product.icons1}`)} alt="image" />
-                                </Icons>
+                    {filteredProducts.length > 0 ? (
+                        filteredProducts.map((product, index) => (
+                            <DogFood key={index}>
+                                <DogTop>
+                                    <NewDiv>
+                                        {product.new ? <NewButton>New</NewButton> : null}
+                                        {product.discount && product.offer ? <Offer>-{product.offer}%</Offer> : null}
+                                    </NewDiv>
+                                    <DogImage src={require(`../../../assets/images/${product.image}`)} alt="image" />
+                                    <Icons>
+                                        <LikeImage
+                                            src={require(`../../../assets/images/${product.icons}`)}
+                                            alt="image"
+                                            onClick={() => handleLikeClick(product.id)}
+                                            style={{
+                                                backgroundColor: likedProducts.has(product.id) ? 'red' : '',
+                                                cursor: 'pointer',
+                                            }} />
+                                        <LikeImage src={require(`../../../assets/images/${product.icons1}`)} alt="image" />
+                                    </Icons>
 
-                                <AddToCart id='btn'>
-                                    <AddToParagraph> Add To Cart</AddToParagraph>
-                                </AddToCart>
+                                    <AddToCart id='btn'>
+                                        <AddToParagraph> Add To Cart</AddToParagraph>
+                                    </AddToCart>
 
-                            </DogTop>
-                            <DogBottom>
-                                <Heading>{product.name}</Heading>
-                                <StarDiv>
-                                    <Amount>$ {product.cost}</Amount>
-                                    {product.discountedCost ? <Discount>${product.discountedCost}</Discount> : null}
-                                    <StarRating rating={product.rating}/>
-                                    <Count>({product.buyed})</Count>
-                                </StarDiv>
+                                </DogTop>
+                                <DogBottom>
+                                    <Heading>{product.name}</Heading>
+                                    <StarDiv>
+                                        <Amount>$ {product.cost}</Amount>
+                                        {product.discountedCost ? <Discount>${product.discountedCost}</Discount> : null}
+                                        <StarRating rating={product.rating} />
+                                        <Count>({product.buyed})</Count>
+                                    </StarDiv>
 
-                                {product.color && (
-                                    <ColorDiv>
-                                        {product.color1 && (
-                                            <Red
-                                                style={{
-                                                    backgroundColor: product.color1,
-                                                    transform: selectedColors[product.id] === product.color1 ? 'scale(1)' : 'scale(.9)',
-                                                    transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-                                                    border: selectedColors[product.id] === product.color1 ? '1px solid black' : '',
-                                                }}
-                                                onClick={() => handleColorSelect(product.id, product.color1)}
-                                            ></Red>
-                                        )}
+                                    {product.color && (
+                                        <ColorDiv>
+                                            {product.color1 && (
+                                                <Red
+                                                    style={{
+                                                        backgroundColor: product.color1,
+                                                        transform: selectedColors[product.id] === product.color1 ? 'scale(1)' : 'scale(.9)',
+                                                        transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+                                                        border: selectedColors[product.id] === product.color1 ? '1px solid black' : '',
+                                                    }}
+                                                    onClick={() => handleColorSelect(product.id, product.color1)}
+                                                ></Red>
+                                            )}
 
-                                        {product.color2 && (
-                                            <Yellow
-                                                style={{
-                                                    backgroundColor: product.color2,
-                                                    transform: selectedColors[product.id] === product.color2 ? 'scale(1)' : 'scale(.8)',
-                                                    transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-                                                    border: selectedColors[product.id] === product.color2 ? '1px solid black' : '',
-                                                }}
-                                                onClick={() => handleColorSelect(product.id, product.color2)}
-                                            />
-                                        )}
-                                    </ColorDiv>
-                                )}
-                            </DogBottom>
-                        </DogFood>
-                    ))
-                ) : ( <NoProductsMessage>No Products Found In This Category.</NoProductsMessage>)}
+                                            {product.color2 && (
+                                                <Yellow
+                                                    style={{
+                                                        backgroundColor: product.color2,
+                                                        transform: selectedColors[product.id] === product.color2 ? 'scale(1)' : 'scale(.8)',
+                                                        transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+                                                        border: selectedColors[product.id] === product.color2 ? '1px solid black' : '',
+                                                    }}
+                                                    onClick={() => handleColorSelect(product.id, product.color2)}
+                                                />
+                                            )}
+                                        </ColorDiv>
+                                    )}
+                                </DogBottom>
+                            </DogFood>
+                        ))
+                    ) : (<NoProductsMessage>No Products Found In This Category.</NoProductsMessage>)}
                 </Container>
 
                 <Bottom>
@@ -191,13 +191,17 @@ const SpotContainer = styled.div`
     margin: 30px 180px;
     border-radius: 10px;
     padding: 20px;
-    @media (min-width:100px)and(max-width: 1400px){
-        
+    @media (min-width: 100px) and (max-width: 1300px){
+       display: flex;
+       flex-direction: column;
     }
 `;
 const Leftbox = styled.div`
-    margin: 0;
+    margin: 0px 0px 10px 0px;
     padding: 0;
+    @media (min-width: 100px) and (max-width: 1300px){
+       order: 2;
+    }
 `;
 const HeaderSection = styled.div`
     display: flex;
@@ -218,6 +222,7 @@ const Voucher = styled.h2`
     font-size: 48px;
     font-weight: 400;
     line-height: 60px;
+   
 `;
 const Right = styled.div`
     display: flex;
@@ -232,7 +237,11 @@ const SpotLink = styled(Link)`
     border-bottom: 1px solid white;
 `;
 const ArrowIcon = styled.img``;
-const RightBox = styled.div``;
+const RightBox = styled.div`
+    @media (min-width: 100px) and (max-width: 1300px){
+        order: 1;
+    }
+`;
 const MobileImage = styled.img``;
 
 

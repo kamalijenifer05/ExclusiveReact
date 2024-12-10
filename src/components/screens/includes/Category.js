@@ -39,6 +39,7 @@ const Categories = styled.div`
     justify-content: space-around;
     flex-direction: column;
     margin: 50px 180px;
+    flex-wrap: wrap;
 `;
 const Top = styled.div`
     display: flex;
@@ -63,11 +64,9 @@ const Head = styled.h2`
 
 const Items = styled.div`
     display: flex;
-    justify-content: space-between;
+    flex-wrap :wrap;
     text-align: center;
     margin-top: 20px;
-    width: 1500px;
-    height: 145px;
     gap: 30px;
     cursor: pointer;
 `;
