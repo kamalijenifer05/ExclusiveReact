@@ -96,4 +96,3 @@ const BottonTag = styled.div`
     padding: 10px;
 `;
 export default Category;
-// =============================================================

@@ -20,7 +20,7 @@ function Footer() {
                 <Support>
                     <Heading>Support</Heading>
                     <ExclusiveUl>
-                        <List>111 Bijoy sarani, Dhaka,<br/> DH 1515, Bangladesh.</List>
+                        <List>111 Bijoy sarani, Dhaka,<br /> DH 1515, Bangladesh.</List>
                         <List>exclusive@gmail.com</List>
                         <List>+88015-88888-9999</List>
                     </ExclusiveUl>
@@ -85,12 +85,7 @@ const FooterTop = styled.div`
     justify-content: space-around;
     border-bottom: 1px solid gray;
     padding: 50px;
-    /* @media (min-width: 360px) and (max-width: 1200px){
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-  } */
-   @media (max-width: 870px){
+    @media (max-width: 870px){
     gap: 50px 8px ;
    }
 `;
@@ -114,7 +109,7 @@ const ExclusiveOrder = styled.p`
     font-size: 14px;
     font-weight: 300;
 `;
-const Bottom=styled.div`
+const Bottom = styled.div`
     border: 1px solid white;
     display: flex;
     justify-content: center;
@@ -131,7 +126,6 @@ const ExclusiveInput = styled.input`
     }
 `;
 const ExclusiveArrow = styled.img``;
-
 
 const Support = styled.div`
     color: white;
@@ -185,7 +179,6 @@ const SocialMedia = styled.div`
     margin-top: 20px;
 `;
 const FaceBook = styled.img``;
-
 
 const FooterBottom = styled.div`
     display: flex;

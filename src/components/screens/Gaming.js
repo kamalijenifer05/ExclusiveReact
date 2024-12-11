@@ -29,15 +29,14 @@ function Gaming() {
         setDetails(selectedDetails);
 
         if (selectedDetails) {
-          // Combine related products filtering and search filter logic
           const filteredRelatedItems = data
-            .filter(item =>
-              item.category === selectedDetails.category &&
-              item.categories === selectedDetails.categories &&
-              item.id !== selectedDetails.id &&
-              item.name.toLowerCase().includes(search.toLowerCase()) // Adding search filter to related items
-            )
-            .slice(0, 4);
+          .filter(item =>
+            (item.category === selectedDetails.category || !selectedDetails.category) &&
+            (item.categories === selectedDetails.categories || !selectedDetails.categories) &&
+            item.id !== selectedDetails.id &&
+            item.name.toLowerCase().includes(search.toLowerCase())
+          )
+          .slice(0, 4);
 
           setRelatedItems(filteredRelatedItems);
         }
@@ -67,7 +66,6 @@ function Gaming() {
       ...prevState, [productId]: color,
     }));
   };
-
 
   const handleLikeClick = (productId) => {
     setLikedProducts((prevLiked) => {
