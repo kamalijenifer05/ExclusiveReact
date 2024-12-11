@@ -23,7 +23,7 @@ function Top() {
                     <TopLink to="/Secondpage">ShopNow</TopLink>
                 </Left>
                 <Right>
-                    <p>{selectedLanguage}</p>
+                    <Text>{selectedLanguage}</Text>
                     <TopIcon src={require("../../../assets/images/Vector (5).png")} alt="image" onClick={toggleDropdown}></TopIcon>
                     {isDropdownVisible && (
                         <DropdownMenu>
@@ -86,7 +86,7 @@ const Right = styled.div`
         gap: 0px;
     }
 `;
-const p = styled.p`
+const Text = styled.p`
     font-size: 14px;
 `;
 const TopIcon = styled.img`

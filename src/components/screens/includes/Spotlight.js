@@ -10,8 +10,8 @@ function Spotlight({ spotlightRef }) {
     const { search } = useSearch();
     const navigate = useNavigate();
     const [products, setProducts] = useState([]);
-    const [allProducts, setAllProducts] = useState(data);
-    const [itemsToShow, setItemsToShow] = useState(8);
+    const [allProducts] = useState(data);
+    const [itemsToShow] = useState(8);
     const [selectedColors, setSelectedColors] = useState({});
     const [category, setCategory] = useState(null);
 
