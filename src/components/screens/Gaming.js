@@ -57,9 +57,9 @@ function Gaming() {
     return <p>Product not found.</p>;
   }
 
-  const filteredProducts = products.filter(product =>
-    product.name.toLowerCase().includes(search.toLowerCase())
-  );
+  // const filteredProducts = products.filter(product =>
+  //   product.name.toLowerCase().includes(search.toLowerCase())
+  // );
 
   const handleColorSelect = (productId, color) => {
     setSelectedColors(prevState => ({

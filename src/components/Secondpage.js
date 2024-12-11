@@ -336,18 +336,18 @@ const Yellow = styled.div`
      border-radius: 50%;
 `;
 
-const Bottom = styled.div``;
-const Button = styled(Link)``;
-const BottomButton = styled(Link)`
-  background-color: var(--green);
-  color: var(--white);
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-  text-align: center;
+// const Bottom = styled.div``;
+// const Button = styled(Link)``;
+// const BottomButton = styled(Link)`
+//   background-color: var(--green);
+//   color: var(--white);
+//   padding: 10px 20px;
+//   text-decoration: none;
+//   border-radius: 4px;
+//   font-weight: bold;
+//   text-align: center;
 
-  &:hover {
-    background-color: var(--dark-green);
-  }
-`;
+//   &:hover {
+//     background-color: var(--dark-green);
+//   }
+// `;
