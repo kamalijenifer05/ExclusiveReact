@@ -183,9 +183,7 @@ function Gaming() {
             <Containerer>
               {relatedItems.map((product, index) => (
                 <DogFood key={index}>
-                  <DogTop
-                  // onClick={() => handleNextPage(product.id)}
-                  >
+                  <DogTop>
                     <NewDiv>
                       {product.new ? <NewButton>New</NewButton> : null}
                       {product.discount && product.offer ? <Offer>-{product.offer}%</Offer> : null}
@@ -709,3 +707,6 @@ const Yellow = styled.div`
  border-radius: 50%;
 `;
 export default Gaming;
+
+
+
