@@ -58,7 +58,8 @@ function Secondpage() {
 
             <ProductsContainer>
                 <Container>
-                    {filteredProducts.map((product, index) => (
+                {filteredProducts.length > 0 ? (
+                    filteredProducts.map((product, index) => (
                         <DogFood key={index}>
                             <DogTop>
                                 <NewDiv>
@@ -126,7 +127,8 @@ function Secondpage() {
                                 )}
                             </DogBottom>
                         </DogFood>
-                    ))}
+                    ))
+                ) : (<NoProductsMessage>No Products Found In This Category.</NoProductsMessage>)}
                 </Container>
             </ProductsContainer>
             <Footer />
@@ -134,7 +136,10 @@ function Secondpage() {
     );
 }
 export default Secondpage;
-
+const NoProductsMessage = styled.p`
+    font-size: 20px;
+    font-weight: 400;
+`;
 const Navigation = styled.div`
     display: flex;
     align-items: center;

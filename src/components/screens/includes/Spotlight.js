@@ -144,7 +144,7 @@ function Spotlight({ spotlightRef }) {
                             </DogFood>
                         ))
                     ) : (<NoProductsMessage>No Products Found In This Category.</NoProductsMessage>)}
-                </Container>
+                </Container> 
 
                 <Bottom>
                     <Button to="/Secondpage">View All Products</Button>

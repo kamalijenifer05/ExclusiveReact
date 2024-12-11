@@ -172,13 +172,15 @@ function Gaming() {
         </ProductContainer>
       </ProductsDetailsPage>
 
-      {relatedItems.length > 0 && (
+      {relatedItems.length > 0 ? (
+      relatedItems.length > 0 && (
         <RelatedProducts>
           <RelatedItemTop>
             <RelatedColor></RelatedColor>
             <RelatedItem>Related Items</RelatedItem>
           </RelatedItemTop>
 
+          
           <ProductsContainer>
             <Containerer>
               {relatedItems.map((product, index) => (
@@ -252,12 +254,18 @@ function Gaming() {
             </Containerer>
           </ProductsContainer>
         </RelatedProducts>
-      )}
+      ) ) : (<NoProductsMessage>No Products Found In This Category.</NoProductsMessage>)}
       <Footer />
     </>
   );
 }
-
+const NoProductsMessage = styled.p`
+    font-size: 20px;
+    font-weight: 400;
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+`;
 const Navigation = styled.div`
     display: flex;
     align-items: center;
