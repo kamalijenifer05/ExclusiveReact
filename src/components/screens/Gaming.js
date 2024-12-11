@@ -11,16 +11,16 @@ import { useSearch } from '../Search';
 function Gaming() {
   const { id } = useParams();
   const { search } = useSearch();
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
   const [details, setDetails] = useState(null);
   const [loading, setLoading] = useState(true);
   const [relatedItems, setRelatedItems] = useState([]);
   const [selectedColors, setSelectedColors] = useState({});
   const [likedProducts, setLikedProducts] = useState(new Set());
 
-  useEffect(() => {
-    setProducts(data);
-  }, []);
+  // useEffect(() => {
+  //   setProducts(data);
+  // }, []);
 
   useEffect(() => {
     const fetchDetails = () => {

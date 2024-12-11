@@ -422,7 +422,7 @@ const Discount = styled.p`
     color: gray;
     text-decoration: line-through;
 `;
-const Rating = styled.img``;
+// const Rating = styled.img``;
 const Count = styled.p`
     margin: 0px;
     color: gray;
