@@ -60,9 +60,7 @@ function Secondpage() {
                 <Container>
                     {filteredProducts.map((product, index) => (
                         <DogFood key={index}>
-                            <DogTop
-                                    onClick={() => handleNextPage(product.id)}
-                                    >
+                            <DogTop>
                                 <NewDiv>
                                     {product.new ? <NewButton>New</NewButton> : null}
                                     {product.discount && product.offer ? <Offer>-{product.offer}%</Offer> : null}
@@ -70,6 +68,7 @@ function Secondpage() {
                                 <DogImage
                                     src={require(`../assets/images/${product.image}`)}
                                     alt="image"
+                                    onClick={() => handleNextPage(product.id)}
                                 />
                                 <Icons>
                                     <LikeImage

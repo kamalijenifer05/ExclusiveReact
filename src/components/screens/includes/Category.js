@@ -40,6 +40,12 @@ const Categories = styled.div`
     flex-direction: column;
     margin: 50px 180px;
     flex-wrap: wrap;
+    @media (min-width: 420px) and (max-width: 589px){
+       margin: 30px 100px;
+    }
+    @media (min-width: 360px) and (max-width: 419px){
+       margin: 30px 50px;
+    }
 `;
 const Top = styled.div`
     display: flex;

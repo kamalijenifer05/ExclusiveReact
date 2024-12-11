@@ -184,6 +184,7 @@ function Spotlight({ spotlightRef }) {
 
 const SpotContainer = styled.div`
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     background-color: black;
@@ -191,15 +192,31 @@ const SpotContainer = styled.div`
     margin: 30px 180px;
     border-radius: 10px;
     padding: 20px;
-    @media (min-width: 100px) and (max-width: 1300px){
+    @media (min-width: 1000px) and (max-width: 1300px){
        display: flex;
        flex-direction: column;
+    }
+    @media (min-width: 360px) and (max-width: 999px){
+       display: flex;
+       flex-direction: column;
+    }
+    @media (min-width: 590px) and (max-width: 719px){
+        margin: 30px 130px;
+    }
+    @media (min-width: 420px) and (max-width: 589px){
+       margin: 30px 100px;
+    }
+    @media (min-width: 360px) and (max-width: 419px){
+       margin: 30px 50px;
     }
 `;
 const Leftbox = styled.div`
     margin: 0px 0px 10px 0px;
     padding: 0;
-    @media (min-width: 100px) and (max-width: 1300px){
+    @media (min-width: 1000px) and (max-width: 1300px){
+       order: 2;
+    }
+    @media (min-width: 360px) and (max-width: 999px){
        order: 2;
     }
 `;
@@ -222,7 +239,14 @@ const Voucher = styled.h2`
     font-size: 48px;
     font-weight: 400;
     line-height: 60px;
-   
+    @media (min-width: 720px) and (max-width: 999px){
+        font-size: 35px;
+        line-height: 40px;
+    }
+    @media (min-width: 360px) and (max-width: 719px){
+        font-size: 30px;
+        line-height: 40px;
+    }
 `;
 const Right = styled.div`
     display: flex;
@@ -238,11 +262,24 @@ const SpotLink = styled(Link)`
 `;
 const ArrowIcon = styled.img``;
 const RightBox = styled.div`
-    @media (min-width: 100px) and (max-width: 1300px){
+    @media (min-width: 1000px) and (max-width: 1300px){
+        order: 1;
+    }
+    @media (min-width: 360px) and (max-width: 999px){
         order: 1;
     }
 `;
-const MobileImage = styled.img``;
+const MobileImage = styled.img`
+     @media (min-width: 720px) and (max-width: 999px){
+        width: 340px;
+    }
+    @media (min-width: 590px) and (max-width: 719px){
+       display: none;
+    }
+    @media (min-width: 360px) and (max-width: 589px){
+        display: none;
+    }
+`;
 
 
 const ProductsContainer = styled.div`
