@@ -120,6 +120,7 @@ const Bottom = styled.div`
 const ExclusiveInput = styled.input`
     background-color: transparent;
     border: none;
+    color: white;
     font-size: 14px;
     &:focus{
         outline: none;
