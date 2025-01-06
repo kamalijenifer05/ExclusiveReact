@@ -42,7 +42,7 @@ function Top() {
 
 const TopContainer = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background-color: black;
     color: white;
@@ -59,7 +59,7 @@ const Left = styled.div`
 `;
 const TopParagraph = styled.p`
     font-size: 14px;
-    @media (min-width: 360px) and (max-width: 700px){
+    @media (min-width: 320px) and (max-width: 700px){
        display: none;
     }
 `;
@@ -70,7 +70,6 @@ const TopLink = styled(Link)`
     font-weight: 600;
     text-decoration: none;
     border-bottom: 1px solid white;
-
     &:hover {
         background-color: #444; 
         cursor: pointer;
@@ -79,7 +78,6 @@ const TopLink = styled(Link)`
 const Right = styled.div`
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     position: relative;
     gap: 10px;
     @media (min-width: 360px) and (max-width: 800px){
@@ -108,7 +106,6 @@ const DropdownMenu = styled.div`
         text-align: center;
     }
 `;
-
 const DropdownItem = styled.div`
     padding: 5px 15px;
     font-weight: 300;

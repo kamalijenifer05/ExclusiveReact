@@ -13,7 +13,7 @@ function Footer() {
                     <ExclusiveOrder>Get 10% off your first order</ExclusiveOrder>
                     <Bottom>
                         <ExclusiveInput type='email' placeholder="Enter your email" />
-                        <ExclusiveArrow src={require("../../../assets/images/Vector (4).png")} alt="image"></ExclusiveArrow>
+                        <ExclusiveArrow to = "#" src={require("../../../assets/images/Vector (4).png")} alt="image"></ExclusiveArrow>
                     </Bottom>
                 </Exclusive>
 
@@ -52,17 +52,17 @@ function Footer() {
                     <Scanner>
                         <Paragraph>Save $3 with App New User Only</Paragraph>
                         <Images>
-                            <ScannerImage src={require("../../../assets/images/Qrcode 1.png")} alt="" />
+                            <ScannerImage to = "#" src={require("../../../assets/images/Qrcode 1.png")} alt="" />
                             <AppStore>
-                                <PlayStore src={require("../../../assets/images/png-transparent-google-play-store-logo-google-play-app-store-android-wallets-text-label-logo.png")} alt="image" />
-                                <PlayStore src={require("../../../assets/images/download-appstore.png")} alt="image" />
+                                <PlayStore to = "#" src={require("../../../assets/images/png-transparent-google-play-store-logo-google-play-app-store-android-wallets-text-label-logo.png")} alt="image" />
+                                <PlayStore to = "#" src={require("../../../assets/images/download-appstore.png")} alt="image" />
                             </AppStore>
                         </Images>
                         <SocialMedia>
-                            <FaceBook src={require("../../../assets/images/Vector.png")} alt="image" />
-                            <FaceBook src={require("../../../assets/images/Vector (1).png")} alt="image" />
-                            <FaceBook src={require("../../../assets/images/Vector (2).png")} alt="image" />
-                            <FaceBook src={require("../../../assets/images/Vector (3).png")} alt="image" />
+                            <FaceBook to = "#" src={require("../../../assets/images/Vector.png")} alt="image" />
+                            <FaceBook to = "#" src={require("../../../assets/images/Vector (1).png")} alt="image" />
+                            <FaceBook to = "#" src={require("../../../assets/images/icon-instagram.png")} alt="image" />
+                            <FaceBook to = "#" src={require("../../../assets/images/Vector (3).png")} alt="image" />
                         </SocialMedia>
                     </Scanner>
                 </Download>
@@ -111,6 +111,7 @@ const ExclusiveOrder = styled.p`
 `;
 const Bottom = styled.div`
     border: 1px solid white;
+    border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,7 +127,9 @@ const ExclusiveInput = styled.input`
         outline: none;
     }
 `;
-const ExclusiveArrow = styled.img``;
+const ExclusiveArrow = styled.img`
+    cursor: pointer;
+`;
 
 const Support = styled.div`
     color: white;
@@ -162,18 +165,19 @@ const Paragraph = styled.p`
     font-size: 14px;
     font-weight: 200;
 `;
-const Images = styled.div`
+const Images = styled(Link)`
     display: flex;
     gap: 10px;
 `;
-const ScannerImage = styled.img``;
-const AppStore = styled.div`
+const ScannerImage = styled.img``; 
+
+const AppStore = styled(Link)`
     display: flex;
     flex-direction: column;
     gap: 10px;
 `;
 const PlayStore = styled.img``;
-const SocialMedia = styled.div`
+const SocialMedia = styled(Link)`
     display: flex;
     align-items: center;
     gap: 40px;

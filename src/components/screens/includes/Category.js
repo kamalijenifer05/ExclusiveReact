@@ -46,6 +46,9 @@ const Categories = styled.div`
     @media (min-width: 360px) and (max-width: 419px){
        margin: 30px 50px;
     }
+    @media (min-width: 320px) and (max-width: 359px){
+       margin: 30px 50px;
+    }
 `;
 const Top = styled.div`
     display: flex;
@@ -62,16 +65,24 @@ const Color = styled.div`
 const Title = styled.h5`
     font-size: 16px;
     font-weight: 600;
+    color:  #DB4444;
+    margin: 0;
 `;
 const Head = styled.h2`
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 600;
+    @media (min-width: 320px) and (max-width: 359px){
+        margin: 10px 0px;
+        line-height: 40px;
+        font-size: 20px;
+    }
 `;
 
 const Items = styled.div`
     display: flex;
     flex-wrap :wrap;
     text-align: center;
+    justify-content: center;
     margin-top: 20px;
     gap: 30px;
     cursor: pointer;
@@ -79,11 +90,13 @@ const Items = styled.div`
 const Image = styled.div`
     border: 1px solid gray;
     width: 170px;
-    height: 130px;
+    height: 145px;
     border-radius: 4px;
     padding-top: 5px;
     line-height: 20px;
+    @media (max-width: 1743px){
 
+    }
 `;
 const Img = styled.img`
       padding: 5px;

@@ -145,13 +145,8 @@ const Navigation = styled.div`
     align-items: center;
     gap: 10px;
     text-align: center;
-    margin: 30px 180px;
-
-    @media (min-width: 360px) and (max-width: 500px){
-        display: flex;
-        justify-content: center;
-        align-items: center;
-  }
+    width: 80%;
+    margin: 30px auto;
 `;
 const Path = styled(Link)`
     text-decoration: none;
@@ -173,17 +168,23 @@ const Products = styled(Link)`
 
 const ProductsContainer = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin: 50px 180px;
+    width: 80%;
+    margin: 50px auto;
+    @media (min-width: 320px) and (max-width: 500px)  {
+       margin: 20px auto;
+    }
 `;
 const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content:space-between;
-    gap: 5px;
-    padding: 20px 0px;
+    justify-content: center;
+    gap: 40px;
+    @media (min-width: 320px) and (max-width: 500px)  {
+       gap: 0px 40px;
+    } 
 `;
 const DogFood = styled.div`
     display: flex;
@@ -194,8 +195,8 @@ const DogFood = styled.div`
 const DogTop = styled.div`
     display: flex;
     background-color: #F5F5F5;
-    padding:25px;
-    gap: 0px 0px;
+    padding: 25px;
+    gap: 10px 0px;
     width: 270px;
     height: 290px;
     align-items: center;                               
@@ -206,7 +207,10 @@ const DogTop = styled.div`
     flex-direction: column;   
     &:hover #btn{
         display: block;
-    }                            
+    }   
+    @media (min-width: 320px) and (max-width: 500px)  {
+        padding: 0px;
+    }                       
 `;
 const DogImage = styled.img``;
 const Icons = styled.div`
@@ -242,6 +246,9 @@ const AddToParagraph = styled.button`
     position: absolute;
     left: 0;
     cursor: pointer;
+    @media (min-width: 320px) and (max-width: 500px)  {
+       width: 270px;
+    }
 `;
 
 const NewDiv = styled.div`
@@ -336,18 +343,3 @@ const Yellow = styled.div`
      border-radius: 50%;
 `;
 
-// const Bottom = styled.div``;
-// const Button = styled(Link)``;
-// const BottomButton = styled(Link)`
-//   background-color: var(--green);
-//   color: var(--white);
-//   padding: 10px 20px;
-//   text-decoration: none;
-//   border-radius: 4px;
-//   font-weight: bold;
-//   text-align: center;
-
-//   &:hover {
-//     background-color: var(--dark-green);
-//   }
-// `;
