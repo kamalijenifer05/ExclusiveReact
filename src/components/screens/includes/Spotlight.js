@@ -418,6 +418,9 @@ const AddToParagraph = styled.button`
   position: absolute;
   left: 0;
   cursor: pointer;
+  @media (min-width: 320px) and (max-width: 500px) {
+    width: 250px;
+  }
 `;
 const NewDiv = styled.div`
   display: flex;
